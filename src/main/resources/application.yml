@@ -9,4 +9,13 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/ssh_mall?serverTimezone=Asia/Shanghai
     username: root
-    password: 12345
+    password: 123456
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: auto #id生成规则：数据库id自增
+  configuration:
+    map-underscore-to-camel-case: false # 开启驼峰功能
+    auto-mapping-behavior: full # 自动映射任何复杂的结果
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mybatis/mapper/*.xml

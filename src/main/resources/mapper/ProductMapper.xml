@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssh.mapper.ProductMapper">
+
+    <resultMap id="BaseResultMap" type="com.ssh.entity.Product">
+            <id property="id" column="id" jdbcType="INTEGER"/>
+            <result property="productName" column="product_name" jdbcType="VARCHAR"/>
+            <result property="price" column="price" jdbcType="DECIMAL"/>
+            <result property="stock" column="stock" jdbcType="INTEGER"/>
+            <result property="proPic" column="pro_pic" jdbcType="VARCHAR"/>
+            <result property="isHot" column="is_hot" jdbcType="BIT"/>
+            <result property="isSwiper" column="is_swiper" jdbcType="BIT"/>
+            <result property="swiperPic" column="swiper_pic" jdbcType="VARCHAR"/>
+            <result property="swiperSort" column="swiper_sort" jdbcType="VARCHAR"/>
+            <result property="typeId" column="type_id" jdbcType="INTEGER"/>
+            <result property="hotDateTime" column="hot_date_time" jdbcType="TIMESTAMP"/>
+            <result property="productIntroImg" column="product_intro_img" jdbcType="VARCHAR"/>
+            <result property="productParaImg" column="product_para_img" jdbcType="VARCHAR"/>
+            <result property="productDesc" column="product_desc" jdbcType="VARCHAR"/>
+            <result property="publicBy" column="public_time" jdbcType="VARCHAR"/>
+            <result property="salesCount" column="sales_count" jdbcType="VARCHAR"/>
+            <result property="realSalesCount" column="real_sales_count" jdbcType="VARCHAR"/>
+            <result property="publicBy" column="public_by" jdbcType="VARCHAR"/>
+            <result property="discountedPrice" column="discounted_price" jdbcType="VARCHAR"/>
+            <result property="commentCount" column="comment_count" jdbcType="VARCHAR"/>
+            <result property="commentTime" column="comment_time" jdbcType="VARCHAR"/>
+            <result property="commentStatus" column="comment_status" jdbcType="VARCHAR"/>
+            <result property="isDeleted" column="is_deleted" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,product_name,price,tock,pro_pic,is_hot,is_swiper,swiper_pic,swiper_sort,
+        type_id,hot_date_time,product_intro_img,product_para_img,product_desc,
+        public_time,sales_count,real_sales_count,public_by,discounted_price,
+        comment_count,comment_timecomment_status,is_deleted
+    </sql>
+</mapper>
